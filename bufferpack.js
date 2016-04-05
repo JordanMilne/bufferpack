@@ -275,7 +275,7 @@ function BufferPack() {
 
   // Pack the supplied values into a new octet array, according to the fmt string
   m.pack = function (fmt, values) {
-    return this.packTo(fmt, new Buffer(this.calcLength(fmt, values)), 0, values);
+    return this.packTo(fmt, new Uint8Array(this.calcLength(fmt, values)), 0, values);
   };
 
   // Determine the number of bytes represented by the format string
